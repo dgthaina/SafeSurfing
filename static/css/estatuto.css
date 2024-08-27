@@ -1,0 +1,9 @@
+#art4 > p {
+    text-align: right;
+    font-style: italic;
+}
+
+#imagens-estatuto > * {
+    width: auto;
+    height: 20em;
+}
