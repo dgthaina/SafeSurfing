@@ -12,12 +12,11 @@ body {
 }
 
 .texto {
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-family: 'Inter', sans-serif;
 }
 
 .seção {
-    margin-left: 7em;
-    margin-right: 7em;
-    position: relative;
+    margin-left: 10em;
+    margin-right: 10em;
 }
