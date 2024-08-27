@@ -1,3 +1,28 @@
-#aspectos > h2 {
-    text-align: center;
+#aspectos {
+    margin: 0;
 }
+
+#aspectos section {
+    display: flex;
+    justify-content: space-between;
+}
+
+#aspectos .conteudo {
+    background-color: #80472d;
+    padding: 1em;
+    font-size: 2em;
+    border-top-right-radius: 20em;
+    border-bottom-right-radius: 20em;
+}
+
+#aspectos section > * {
+    width: 50%;
+}
+
+#aspectos .conteudo h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+#aspectos .conteudo p {
+    font-family: 'Inter', sans-serif;
+  }
