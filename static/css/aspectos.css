@@ -1,3 +1,66 @@
-#aspectos > h2 {
-    text-align: center;
+#aspectos {
+    margin: 0;
+}
+
+#aspectos section {
+    display: flex;
+    justify-content: space-between;
+}
+
+#aspectos section .conceito > * {
+    max-width: 50%;
+}
+
+#aspectos section .conceito {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+#aspectos section .conceito .conteudo {
+    background-color: #80472d;
+    padding: 1em;
+    font-size: 2em;
+    border-top-right-radius: 7em;
+    border-bottom-right-radius: 7em;
+}
+
+#aspectos section .conceito .conteudo h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+#aspectos section .conceito .conteudo p {
+    font-family: 'Inter', sans-serif;
+}
+
+#aspectos section .conceito .conteudo button {
+    background-color: #f1d6b5;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75em;
+    padding: 0.5em;
+    border-radius: 2em;
+    border: 0;
+}
+
+
+#aspectos section .conceito .espaco {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2em;
+}
+
+#aspectos section .conceito .espaco span {
+    width: 1em;
+    height: 1em;
+    background-color: #80472d;
+    border-radius: 50%;
+    display: block;
+}
+
+#aspectos section .conceito .conteudo:hover ~ .espaco {
+    width: 0;
+}
+
+#aspectos section .conceito .conteudo:hover {
+    width: 100vw;
 }
