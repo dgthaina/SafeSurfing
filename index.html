@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="static\css\introducao.css">
     <link rel="stylesheet" href="static\css\aspectos.css">
     <link rel="stylesheet" href="static\css\estatuto.css">
+    <link rel="stylesheet" href="static\css\recursos.css">
     <link rel="stylesheet" href="static\css\divisão.css">
 </head>
 <body>
@@ -127,8 +128,43 @@
                 <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nesciunt, cupiditate soluta excepturi quaerat officiis deserunt similique non. Provident pariatur maxime culpa possimus, doloribus minima dolor! Sint, odio! Fuga, dolores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, neque quam optio tempore qui repellat deserunt at molestias magni. Harum accusamus recusandae itaque ipsam quas dignissimos iusto tempore iste quaerat!</p>
             </div>
 
+            <!-- <div id="carrossel">
+                <div class="card">
+                    <img src="static/img/recursos/foto-da-ferramenta.jpg" alt="" id="logo-ferramenta">
+                    <h5 class="titulo-card">NOME</h5>
+                    <p class="texto-card">Início de um texto sobre a ferramenta</p>
+                    <button>Saiba mais</button>
+                </div>
+            </div> -->
+
+            <div class="carrossel-container">
+                <button class="prev" onclick="moveCarrossel(-1)">&#10094;</button>
+                <div id="carrossel">
+                    <div class="card">
+                        <img src="static/img/recursos/foto-da-ferramenta.jpg" alt="" class="logo-ferramenta">
+                        <h5 class="titulo-card">NOME</h5>
+                        <p class="texto-card">Início de um texto sobre a ferramenta</p>
+                        <button>Saiba mais</button>
+                    </div>
+                    <div class="card">
+                        <img src="static/img/recursos/foto-da-ferramenta.jpg" alt="" class="logo-ferramenta">
+                        <h5 class="titulo-card">NOME</h5>
+                        <p class="texto-card">Início de um texto sobre a ferramenta</p>
+                        <button>Saiba mais</button>
+                    </div>
+                    <div class="card">
+                        <img src="static/img/recursos/foto-da-ferramenta.jpg" alt="" class="logo-ferramenta">
+                        <h5 class="titulo-card">NOME</h5>
+                        <p class="texto-card">Início de um texto sobre a ferramenta</p>
+                        <button>Saiba mais</button>
+                    </div>
+                </div>
+                <button class="next" onclick="moveCarrossel(1)">&#10095;</button>
+            </div>
         </article>
 
     <footer></footer>
+
+    <script src="static/js/script.js"></script>
 </body>
 </html>
