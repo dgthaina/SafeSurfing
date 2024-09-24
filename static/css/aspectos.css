@@ -42,11 +42,11 @@
     border: 0;
 }
 
-
 #aspectos section .conceito .espaco {
     display: flex;
     justify-content: space-evenly;
     gap: 2em;
+    width: 100%;
 }
 
 #aspectos section .conceito .espaco span {
@@ -58,7 +58,7 @@
 }
 
 #aspectos section .conceito .conteudo:hover ~ .espaco {
-    width: 0;
+    max-width: 0;
 }
 
 #aspectos section .conceito .conteudo:hover {
