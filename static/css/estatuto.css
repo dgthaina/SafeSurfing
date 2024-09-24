@@ -1,9 +1,43 @@
+.texto {
+    text-align: justify;
+}
+
+#estatuto > h2{
+    justify-content: center;
+    display: flex;
+}
+
+#titulo-estatuto {
+    display: flex;
+    justify-content: center;
+}
+
+#riscos-titulo-estatuto, #riscos-titulo-estatuto2 {
+    width: 1em;
+}
+
+#riscos-titulo-estatuto2 {
+    transform: scale(-1);
+}
+
+
 #art4 > p {
     text-align: right;
     font-style: italic;
+    width: 100%;
 }
 
-#imagens-estatuto > * {
-    width: auto;
-    height: 20em;
+#imagens-estatuto {
+    width: 50%;
+}
+
+.conteudo-estatuto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#livro-estatuto {
+    width: 25em;
+    height: auto;
 }

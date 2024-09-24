@@ -1,0 +1,31 @@
+@media screen and (max-width: 1020px) { 
+    #riscos-titulo-estatuto, #riscos-titulo-estatuto2 {
+        height: 1.5em !important;
+        width: auto;
+    }
+
+    #estatuto > h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .conteudo-estatuto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #imagens-estatuto {
+        width: 75% !important;
+    }
+    
+}
+
+@media screen and (max-width: 800px) { 
+    #imagens-estatuto {
+        width: 100% !important;
+    }
+
+}
