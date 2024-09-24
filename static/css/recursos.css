@@ -1,0 +1,87 @@
+.card {
+    background: linear-gradient(to right, #db9c6d, #ffe0a5, #db9c6d);
+    border-radius: 10px;
+    width: 20%;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 20px 50px -1em rgba(0, 0, 0, 0.575);
+}
+
+
+.logo-ferramenta {
+    border-radius: 50%;
+    width: 50%;
+}
+   
+
+.titulo-card {
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    color: #402012;
+    margin:0;
+}
+
+.texto-card {
+    font-size: 1.2em;
+    font-family: 'Inter', sans-serif;
+    color: #80472d;
+    margin: 1em;
+    text-align: center;
+}
+
+button {
+    background-color: #80472d;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75em;
+    padding: 0.5em;
+    border-radius: 2em;
+    border: 0;
+}
+
+.carrossel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#carrossel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+
+.logo-ferramenta {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+
+button:hover {
+    background-color: #ab7d41;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
