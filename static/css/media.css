@@ -23,9 +23,34 @@
     
 }
 
+@media screen and (max-width: 860px) {
+    #aspectos section .conceito .conteudo {
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 0 !important;
+        height: auto !important;
+    }
+
+    #aspectos section .conceito .espaco {
+        display: none !important;
+    }
+}
+
 @media screen and (max-width: 800px) { 
     #imagens-estatuto {
         width: 100% !important;
     }
 
+}
+
+@media screen and (max-width: 700px) {
+    .seção {
+        margin-inline: 5em
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .seção {
+        margin-inline: 2.5em
+    } 
 }
