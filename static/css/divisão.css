@@ -1,0 +1,9 @@
+#divisão > div >img {
+    width: 70%;
+}
+
+#divisão > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
