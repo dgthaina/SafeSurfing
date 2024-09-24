@@ -5,10 +5,13 @@
 #aspectos section {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 #aspectos section .conceito > * {
+    width: 50%;
     max-width: 50%;
+    transition: .7s;
 }
 
 #aspectos section .conceito {
@@ -17,20 +20,53 @@
     align-items: center;
 }
 
+#aspectos section .conceito:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
 #aspectos section .conceito .conteudo {
-    background-color: #80472d;
     padding: 1em;
     font-size: 2em;
+    height: 8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#aspectos section .conceito:nth-child(odd) .conteudo {
+    background-color: #80472d;
+    color: #f1d6b5;
     border-top-right-radius: 7em;
     border-bottom-right-radius: 7em;
+    align-items: start;
+    text-align: left;
+}
+
+#aspectos section .conceito:nth-child(even) .conteudo {
+    background-color: #e6b677;
+    color: #80472d;
+    border-top-left-radius: 7em;
+    border-bottom-left-radius: 7em;
+    align-items: end;
+    text-align: right;
+}
+
+#aspectos section .conceito:nth-child(odd) .espaco span {
+    background-color: #80472d;
+}
+
+#aspectos section .conceito:nth-child(even) .espaco span {
+    background-color: #e6b677;
 }
 
 #aspectos section .conceito .conteudo h3 {
     font-family: 'Poppins', sans-serif;
+    margin-block: 0.5em;
 }
 
 #aspectos section .conceito .conteudo p {
     font-family: 'Inter', sans-serif;
+    margin-block: 0.5em;
 }
 
 #aspectos section .conceito .conteudo button {
@@ -40,6 +76,16 @@
     padding: 0.5em;
     border-radius: 2em;
     border: 0;
+}
+
+#aspectos section .conceito:nth-child(odd) .conteudo button {
+    background-color: #f1d6b5;
+    color: #402012;
+}
+
+#aspectos section .conceito:nth-child(even) .conteudo button {
+    background-color: #80472d;
+    color: #f1d6b5;
 }
 
 #aspectos section .conceito .espaco {
@@ -58,9 +104,12 @@
 }
 
 #aspectos section .conceito .conteudo:hover ~ .espaco {
+    width: 0;
     max-width: 0;
 }
 
 #aspectos section .conceito .conteudo:hover {
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
 }
