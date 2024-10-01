@@ -1,0 +1,175 @@
+/* .card {
+    background: linear-gradient(to right, #db9c6d, #ffe0a5, #db9c6d);
+    border-radius: 10px;
+    width: 22%;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.575);
+}
+
+.logo-ferramenta {
+    border-radius: 50%;
+    width: 50%;
+}
+   
+.titulo-card {
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    color: #402012;
+    margin:0;
+}
+
+.texto-card {
+    font-size: 1.2em;
+    font-family: 'Inter', sans-serif;
+    color: #80472d;
+    margin: 1em;
+    text-align: center;
+}
+
+button {
+    background-color: #80472d;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75em;
+    padding: 0.5em;
+    border-radius: 2em;
+    border: 0;
+}
+
+.carrossel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    gap: 2em;
+}
+
+#carrossel {
+    display: flex;
+    transition: transform 0.5s ease;
+    padding: 0 3em 0 3em;
+}
+
+
+.logo-ferramenta {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+
+.saiba-mais:hover {
+    background-color: #ab7d41;
+}
+
+.prev:hover, .next:hover {
+    font-weight: bold;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+} */
+
+.botões-recursos {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.flechas-recursos > span {
+    font-size: 3em;
+}
+
+.flechas-recursos {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.flechas-recursos > span:hover, span:focus {
+    font-weight:bolder;
+}
+
+#carrossel {
+    height: 50vh;
+    width: 100%;
+}
+
+.card {
+    background: linear-gradient(to right, #db9c6d, #ffe0a5, #db9c6d);
+    border-radius: 10px;
+    height: 50vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.colecao-cards {
+    display: flex;
+    justify-content: center;
+}
+
+#logo-ferramenta {
+    border-radius: 50%;
+    width: 50%;
+}
+
+.titulo-card {
+    font-family: 'Poppins',sans-serif;
+    color: #402012;
+    font-size: 1.5em;
+    margin: 0.5em 0 0.5em 0 ;
+}
+
+.texto-card {
+    font-family: 'Inter',sans-serif;
+    color: #402012;
+    font-size: 1em;
+    margin: 0;
+    text-align: center;
+}
+
+.botao-saibamais {
+    background-color: #80472d;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8em;
+    padding: 0.5em;
+    margin: 1em 0 1em 0;
+    border-radius: 2em;
+    border: 0;
+}
+
+#sombra-card {
+    width: 25vw;
+    opacity: 0.5;
+    margin-top: -1em;
+    z-index: -500;
+}
+
+.card-sombra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

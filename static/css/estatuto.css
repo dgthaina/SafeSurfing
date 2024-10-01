@@ -5,6 +5,7 @@
 #estatuto > h2{
     justify-content: center;
     display: flex;
+    gap: 2%;
 }
 
 #titulo-estatuto {

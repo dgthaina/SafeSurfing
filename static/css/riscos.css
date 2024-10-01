@@ -1,0 +1,90 @@
+#riscos {
+    background: rgb(219,156,109);
+    background: linear-gradient(90deg, rgba(219,156,109,1) 0%, rgba(255,224,165,1) 50%, rgba(219,156,109,1) 100%);
+    margin: 0;
+}
+
+#riscos .risco img {
+    object-fit: cover;
+    border-radius: 5em;
+}
+
+#riscos .riscos {
+    margin-inline: 14em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+#riscos .riscos .risco {
+    display: flex;
+    gap: 1em;
+}
+
+#riscos .riscos .esquerda .risco {
+    flex-direction: row;
+}
+
+#riscos .riscos .direita .risco {
+    flex-direction: row-reverse;
+}
+
+#riscos .riscos .esquerda {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 50%;
+    gap: 1em;
+}
+
+#riscos .riscos .direita {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 50%;
+    gap: 1em;
+}
+
+#riscos .riscos .risco .conteudo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+
+#riscos .riscos .esquerda .risco .conteudo {
+    text-align: right;
+    align-items: end;
+    border-right: #402012 0.2em solid;
+}
+
+#riscos .riscos .direita .risco .conteudo {
+    text-align: left;
+    align-items: start;
+    border-left: #402012 0.2em solid;
+}
+
+#riscos .riscos .risco .conteudo h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #402012;
+}
+
+#riscos .riscos .risco .conteudo p {
+    font-family: 'Inter', sans-serif;
+    color: #402012;
+}
+
+#riscos .riscos .risco .conteudo button {
+    background-color: #b3a972;
+    color: white;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+#riscos .riscos .risco:hover .conteudo {
+    visibility: visible;
+    opacity: 1;
+}
