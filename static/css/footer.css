@@ -1,0 +1,67 @@
+.footerText {
+    background-color: #e6b677;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgFooter {
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+
+
+.new {
+    left: 20px;
+    
+}
+
+.esquerda {
+    display: flex;
+    width: 85%;
+    margin-left: 80px;
+    align-items: center;
+
+}
+
+.direita {
+    width: 15%;
+    
+    
+}
+.direita a {
+
+    color: #402012;
+    font-size: 1.10em;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.inputNew {
+    
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: 0;
+    width: 300px;
+}
+
+.ButtonNew {
+   
+    background-color: #b3a972;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.90em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: 0;
+    margin-top: 10px;
+    font-weight: 700;
+}
+.new h1 {
+    font-family: 'Inter', sans-serif;
+    color: #402012;
+}
