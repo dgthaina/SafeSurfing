@@ -82,6 +82,8 @@
     color: white;
     padding: 0.5em;
     cursor: pointer;
+    border: none;
+    border-radius: 2em;
 }
 
 #riscos .riscos .risco:hover .conteudo {
