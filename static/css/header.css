@@ -93,8 +93,8 @@ a {
   z-index: 3;
   display: flex;
   align-items: center;
-  margin-left: 6em;
-  margin-right: 40em;
+  width: 50%;
+  padding: 4em;
 }
 
 #logo-title {
