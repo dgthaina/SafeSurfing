@@ -1,3 +1,9 @@
+@media screen and (max-width: 1100px) {
+    #riscos .riscos {
+        margin-inline: 6em;
+    }
+}
+
 @media screen and (max-width: 1020px) { 
     #riscos-titulo-estatuto, #riscos-titulo-estatuto2 {
         height: 1.5em !important;
@@ -34,6 +40,10 @@
     #aspectos section .conceito .espaco {
         display: none !important;
     }
+
+    #riscos .riscos {
+        margin-inline: 3em;
+    }
 }
 
 @media screen and (max-width: 800px) { 
@@ -41,6 +51,19 @@
         width: 100% !important;
     }
 
+    #riscos .riscos {
+        margin-inline: 2em;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #riscos .riscos .risco .conteudo p {
+        display: none;
+    }
+    
+    #riscos .riscos .risco .conteudo button {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 700px) {
