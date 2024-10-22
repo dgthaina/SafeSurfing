@@ -19,7 +19,16 @@ body {
   left: 0;
   right: 0;
   z-index: 20;
-  transition: background-color 0.5s ease;
+  transition: 0.5s;
+}
+
+#navbar .nav-fundo {
+  background: linear-gradient(to right, #a86449, #e6b677 , #a86449);
+  position: absolute;
+  inset: 0;
+  transition: .5s;
+  z-index: -100;
+  opacity: 0;
 }
 
 .nav-scrolled {

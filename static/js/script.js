@@ -1,11 +1,11 @@
 // Controle de estilo da barra de navegação
 
 window.addEventListener("scroll", () => {
-    var navbar2 = document.getElementById("navbar");
+    var navbar2 = document.querySelector("#navbar .nav-fundo");
     if (window.scrollY > 0) {
-        navbar2.style.backgroundColor = "rgb(230, 182, 119)";
+        navbar2.style.opacity = "1";
     } else {
-        navbar2.style.backgroundColor = "transparent";
+        navbar2.style.opacity = "0";
     }
 });
 
