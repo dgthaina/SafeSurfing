@@ -94,6 +94,12 @@
     }
 }
 
+@media screen and (max-width: 500px) {
+    #riscos .riscos .risco .conteudo {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .seção {
         margin-inline: 2.5em;

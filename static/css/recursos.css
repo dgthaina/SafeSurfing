@@ -1,31 +1,35 @@
-.botões-recursos {
+#recursos .botões-recursos {
     display: flex;
     justify-content: space-around;
     align-content: center;
     align-items: center;
 }
 
-.flechas-recursos > span {
+#recursos .flechas-recursos > span {
     font-size: 3em;
 }
 
-.flechas-recursos {
+#recursos .flechas-recursos {
     background-color: transparent;
     border: none;
     padding: 0;
     cursor: pointer;
 }
 
-.flechas-recursos > span:hover, span:focus {
-    font-weight:bolder;
+#recursos .flechas-recursos > span:hover, #recursos span:focus {
+    font-weight: bolder;
 }
 
-#carrossel {
+#recursos #carrossel {
     height: 50vh;
     width: 100%;
 }
 
-.card {
+#recursos .colecao-cards {
+    display: flex;
+}
+
+#recursos .card {
     background: linear-gradient(to right, #db9c6d, #ffe0a5, #db9c6d);
     border-radius: 10px;
     height: 50vh;
@@ -37,17 +41,12 @@
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.255);
 }
 
-.colecao-cards {
-    display: flex;
-    justify-content: center;
-}
-
-#logo-ferramenta {
+#recursos #logo-ferramenta {
     border-radius: 50%;
     width: 50%;
 }
 
-.titulo-card {
+#recursos .titulo-card {
     font-family: 'Poppins',sans-serif;
     color: #402012;
     font-size: 1.5em;
@@ -56,7 +55,7 @@
     line-height: 1.2;
 }
 
-.texto-card {
+#recursos .texto-card {
     font-family: 'Inter',sans-serif;
     color: #402012;
     font-size: 1em;
@@ -64,7 +63,7 @@
     text-align: center;
 }
 
-.botao-saibamais {
+#recursos .botao-saibamais {
     background-color: #80472d;
     color: white;
     font-family: 'Inter', sans-serif;
