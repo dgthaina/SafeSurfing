@@ -22,6 +22,10 @@ body {
   transition: background-color 0.5s ease;
 }
 
+.nav-scrolled {
+  background-color: linear-gradient(135deg, rgb(222, 149, 120), rgb(230, 182, 119), rgb(222, 149, 120));
+}
+
 nav #hamburguer {
   color: white;
   user-select: none;
@@ -55,7 +59,7 @@ a {
 
 #logo-nav {
   height: 3em;
-}
+} 
 
 .stack {
   position: relative;

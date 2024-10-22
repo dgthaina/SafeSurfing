@@ -26,3 +26,15 @@ body {
 h2 {
     text-align: center;
 }
+
+.reveal{
+    position: relative;
+    top: 150px;
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.reveal.active{
+    top: 0;
+    opacity: 1;
+}
