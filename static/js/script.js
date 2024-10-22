@@ -1,3 +1,5 @@
+// Controle de estilo da barra de navegação
+
 window.addEventListener("scroll", () => {
     var navbar2 = document.getElementById("navbar");
     if (window.scrollY > 0) {
@@ -6,6 +8,8 @@ window.addEventListener("scroll", () => {
         navbar2.style.backgroundColor = "transparent";
     }
 });
+
+// Controle da revelação de seções
 
 var t = window.scrollY;
 
@@ -18,6 +22,7 @@ window.onscroll = () => {
         }
     });
 }
+
 // Controle de cards em Recursos
 
 let recursoAtual = 0;
