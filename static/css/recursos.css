@@ -14,6 +14,7 @@
     border: none;
     padding: 0;
     cursor: pointer;
+    user-select: none;
 }
 
 #recursos .flechas-recursos > span:hover, #recursos span:focus {
@@ -27,18 +28,26 @@
 
 #recursos .colecao-cards {
     display: flex;
+    overflow: hidden;
+    max-width: 16em;
+    gap: 100%;
 }
 
 #recursos .card {
     background: linear-gradient(to right, #db9c6d, #ffe0a5, #db9c6d);
     border-radius: 10px;
-    height: 50vh;
-    width: 60%;
+    height: 24em;
+    width: 12em;
+    min-height: 24em;
+    min-width: 12em;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.255);
+    transform: translate(0);
+    transition: .5s;
+    padding-inline: 2em;
 }
 
 #recursos #logo-ferramenta {
