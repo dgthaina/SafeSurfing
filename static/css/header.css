@@ -13,12 +13,21 @@ body {
   'opsz' 24
 }
 
-nav {
+#navbar {
   background-color: transparent;
-  position: fixed; 
-  z-index: 20;
+  position: fixed;
   left: 0;
   right: 0;
+  z-index: 20;
+  transition: background-color 0.5s ease;
+}
+
+nav #hamburguer {
+  color: white;
+  user-select: none;
+  cursor: pointer;
+  display: none;
+  padding: 1em;
 }
 
 li {
@@ -42,7 +51,6 @@ ul {
 a {
   text-decoration: none;
   color: #402012;
-
 }
 
 #logo-nav {

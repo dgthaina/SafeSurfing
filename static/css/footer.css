@@ -11,12 +11,10 @@ footer .imgFooter {
     height: 100px;
     margin-left: 20px;
     margin-right: 20px;
-
 }
 
 footer .new {
     left: 20px;
-    
 }
 
 footer .esquerda {
@@ -28,18 +26,15 @@ footer .esquerda {
 }
 
 footer .direita {
-    width: 15%;
-    
-    
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
-footer .direita a {
 
-    color: #402012;
-    font-size: 1.10em;
-    font-family: 'Inter', sans-serif;
+footer .direita h3{
+    line-height: 1em;
 }
-
 
 footer .inputNew {
     padding: 0.5em;
@@ -58,6 +53,7 @@ footer .ButtonNew {
     border: 0;
     margin-top: 10px;
     font-weight: 700;
+    margin-bottom: 1em;
 }
 
 footer .new h1 {
