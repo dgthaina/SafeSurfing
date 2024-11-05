@@ -1,4 +1,4 @@
-#modal {
+/* #chat {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.5);
     inset: 0;
@@ -9,7 +9,7 @@
     transition: .5s;
 }
 
-#modal .container {
+#chat .container {
     background-color: white;
     position: relative;
     inset: 50%;
@@ -20,20 +20,11 @@
     flex-direction: column;
 }
 
-#modal .titulo {
+#chat .titulo {
     margin: 0;
-    max-width: 100%;
-    text-overflow: ellipsis;
-    overflow: hidden;
 }
 
-#modal .texto {
-    max-width: 100%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-#modal button {
+#chat button {
     background-color: #b3a972;
     color: white;
     padding: 0.5em;
@@ -42,4 +33,4 @@
     border-radius: 2em;
     font-size: 1em;
     align-self: flex-end;
-}
+} */
