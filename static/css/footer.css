@@ -1,56 +1,59 @@
-.footerText {
+footer {
     background-color: #e6b677;
-    padding: 10px 20px;
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
+    padding: 2%;
 }
 
-footer .imgFooter {
-    height: 100px;
-    margin-left: 20px;
-    margin-right: 20px;
+.footerText {
+    display: flex;
+    justify-content: space-between;
 }
 
 footer .esquerda {
+    width: 45%;
     display: flex;
-    width: 50%;
     flex-direction: column;
+    justify-content: center;
 }
+
+footer .direita div {
+    flex-direction: row;
+    display: flex;
+} 
 
 footer .direita {
-    justify-content: center;
-    align-items: center;
+    width: 45%;
     display: flex;
-    width: 50%;
+    align-items: center;
+    justify-content: center;
+
 }
 
-
-footer .direita h3{
-    line-height: 1em;
-}
-
-footer .inputNew {
-    padding: 0.5em;
-    border-radius: 0.5em;
-    border: 0;
-    width: 300px;
-}
-
-footer .ButtonNew {
-    background-color: #b3a972;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.90em;
-    padding: 0.5em;
-    border-radius: 0.5em;
-    border: 0;
-    margin-top: 10px;
-    font-weight: 700;
-    margin-bottom: 1em;
-    width: 10em;
+.direita img {
+    height: 6em;
 }
 
 footer .esquerda h1 {
     font-family: 'Inter', sans-serif;
     color: #402012;
+} 
+
+footer .esquerda input {
+    border-radius: 0.5em;
+    border: 0;
+    padding: 0.5em;
+    width: 20em;
+} 
+
+footer .esquerda button {
+    background-color: #b3a972;
+    border-radius: 0.5em;
+    border: 0;
+    padding: 0.5em;
+    font-family: 'Inter', sans-serif;
+    width: 8em;
+    margin-top: 1em;
+} 
+
+footer .direita h3{
+    line-height: 1em;
 }
