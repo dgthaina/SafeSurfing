@@ -102,6 +102,20 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+
+    #imagens-estatuto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #livro-estatuto {
+        width: 90%;
+    }
+
+}
+
 @media screen and (max-width: 500px) {
     #riscos .riscos .risco .conteudo {
         display: none;
