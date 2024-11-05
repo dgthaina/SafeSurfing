@@ -51,3 +51,19 @@ document.querySelector('#carrossel .tras').addEventListener('click', () => {
 document.querySelector('#carrossel .frente').addEventListener('click', () => {
     trocarRecurso(1)
 });
+
+// Modal
+
+const modal = document.querySelector('#modal');
+
+function abrirModal(titulo, texto) {
+    modal.style.visibility = 'visible';
+    modal.style.opacity = '1';
+}
+
+function fecharModal() {
+    modal.style.opacity = '0';
+    setTimeout(() => {
+        modal.style.visibility = 'hidden';
+    }, 500);
+}

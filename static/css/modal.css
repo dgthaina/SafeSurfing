@@ -1,0 +1,36 @@
+#modal {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    z-index: 1000;
+    padding-inline: 20em;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+
+#modal .container {
+    background-color: white;
+    position: relative;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#modal .titulo {
+    margin: 0;
+}
+
+#modal button {
+    background-color: #b3a972;
+    color: white;
+    padding: 0.5em;
+    cursor: pointer;
+    border: none;
+    border-radius: 2em;
+    font-size: 1em;
+    align-self: flex-end;
+}
