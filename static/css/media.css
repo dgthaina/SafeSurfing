@@ -80,7 +80,7 @@
     #modal {
         padding-inline: 5em;
     }
-    
+
     footer .footerText {
         flex-direction: column;
     }
@@ -159,5 +159,28 @@
 
     #header-p {
         font-size: 1em;
+    }
+
+    .seção {
+        margin-inline: 2em
+    }
+
+    #aspectos section .conceito .conteudo {
+        padding: 0.25em;
+    }
+
+    #aspectos section .conceito .conteudo h3 {
+        font-size: 0.6em;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #aspectos section .conceito .conteudo p {
+        font-size: 0.4em;
+    }
+
+    #aspectos section .conceito .conteudo button {
+        font-size: 0.3em;
     }
 }

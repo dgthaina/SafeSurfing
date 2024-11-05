@@ -2,10 +2,12 @@
     text-align: justify;
 }
 
-#estatuto > h2{
+#estatuto > h2 {
     justify-content: center;
     display: flex;
     gap: 2%;
+    overflow: visible;
+    text-overflow: initial;
 }
 
 #titulo-estatuto {
