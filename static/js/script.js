@@ -9,6 +9,50 @@ window.addEventListener("scroll", () => {
     }
 });
 
+function fecharNav() {
+    document.querySelector('#navbar .nav-real ul').style.maxHeight = '0em';
+    document.querySelector('#navbar .nav-real ul').style.paddingBlock = '0em';
+}
+
+function abrirNav() {
+    document.querySelector('#navbar .nav-real ul').style.maxHeight = '10em';
+    document.querySelector('#navbar .nav-real ul').style.paddingBlock = '0.75em';
+
+}
+
+function atualizarNav() {
+    if (navStatus) {
+        abrirNav();
+        return;
+    }
+    fecharNav();
+}
+
+let navStatus = false;
+
+window.addEventListener("load", () => {
+    if (window.innerWidth < 500) {
+        atualizarNav();
+        return;
+    }
+
+    abrirNav();
+});
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth < 500) {
+        atualizarNav();
+        return;
+    }
+
+    abrirNav();
+});
+
+document.querySelector('#hamburguer').addEventListener('click', () => {
+    navStatus = !navStatus;
+    atualizarNav();
+});
+
 // Controle da revelação de seções
 
 var t = window.scrollY;
@@ -64,10 +108,32 @@ function abrirModal(titulo, texto) {
     modal.style.visibility = 'visible';
     modal.style.opacity = '1';
     modal.querySelector('.titulo').innerText = titulo;
-    modal.querySelector('.texto').innerText = titulo;
+    modal.querySelector('.texto').innerText = texto;
 }
 
 function fecharModal() {
+    modal.style.opacity = '0';
+    setTimeout(() => {
+        modal.style.visibility = 'hidden';
+    }, 500);
+}
+
+// Chat
+
+const chat = document.querySelector('#chat');
+
+chat.querySelector('.fechar').addEventListener('click', () => {
+    fecharChat();
+});
+
+function abrirChat() {
+    modal.style.visibility = 'visible';
+    modal.style.opacity = '1';
+    modal.querySelector('.titulo').innerText = titulo;
+    modal.querySelector('.texto').innerText = texto;
+}
+
+function fecharChat() {
     modal.style.opacity = '0';
     setTimeout(() => {
         modal.style.visibility = 'hidden';

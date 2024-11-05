@@ -6,6 +6,10 @@
     #header-title {
         width: 75%;
     }
+
+    #modal {
+        padding-inline: 10em;
+    }
 }
 
 @media screen and (max-width: 1020px) { 
@@ -72,6 +76,10 @@
     #header-title {
         width: 80%;
     }
+
+    #modal {
+        padding-inline: 5em;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -97,6 +105,23 @@
 @media screen and (max-width: 500px) {
     #riscos .riscos .risco .conteudo {
         display: none;
+    }
+
+    #navbar .nav-real ul {
+        flex-direction: column;
+        align-items: start;
+        margin: 0;
+        max-height: 0em;
+        transition: .5s;
+    }
+
+    #navbar .nav-real ul img {
+        display: none;
+    }
+
+    nav #hamburguer {
+        display: block;
+        padding: 0.5em;
     }
 }
 
