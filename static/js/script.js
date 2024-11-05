@@ -67,3 +67,4 @@ function fecharModal() {
         modal.style.visibility = 'hidden';
     }, 500);
 }
+

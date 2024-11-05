@@ -72,6 +72,14 @@
     #header-title {
         width: 80%;
     }
+
+    .footerText {
+        flex-direction: column;
+    }
+
+    .direita{
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 700px) {
