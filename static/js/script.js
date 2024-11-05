@@ -118,24 +118,3 @@ function fecharModal() {
     }, 500);
 }
 
-// Chat
-
-const chat = document.querySelector('#chat');
-
-chat.querySelector('.fechar').addEventListener('click', () => {
-    fecharChat();
-});
-
-function abrirChat() {
-    modal.style.visibility = 'visible';
-    modal.style.opacity = '1';
-    modal.querySelector('.titulo').innerText = titulo;
-    modal.querySelector('.texto').innerText = texto;
-}
-
-function fecharChat() {
-    modal.style.opacity = '0';
-    setTimeout(() => {
-        modal.style.visibility = 'hidden';
-    }, 500);
-}
