@@ -83,3 +83,21 @@
     border: 0;
     cursor: pointer;
 }
+
+#recursos .botoes-extra {
+    display: none;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+#recursos .botoes-extra button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+#recursos .botoes-extra button > span:hover, #recursos span:focus {
+    font-weight: bolder;
+}

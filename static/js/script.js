@@ -88,13 +88,17 @@ function trocarRecurso(deslocamento) {
     
 }
 
-document.querySelector('#carrossel .tras').addEventListener('click', () => {
-    trocarRecurso(-1)
-});
+document.querySelectorAll('#carrossel .tras').forEach(e => {
+    e.addEventListener('click', () => {
+        trocarRecurso(-1)
+    })
+})
 
-document.querySelector('#carrossel .frente').addEventListener('click', () => {
-    trocarRecurso(1)
-});
+document.querySelectorAll('#carrossel .frente').forEach(e => {
+    e.addEventListener('click', () => {
+        trocarRecurso(1)
+    })
+})
 
 // Modal
 

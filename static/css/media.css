@@ -157,6 +157,17 @@
         width: 90%;
     }
 
+    #recursos .colecao-cards {
+        max-width: 14em;
+    }
+
+    #recursos .colecao-cards .card {
+        min-width: 10em;
+        min-height: 20em;
+        width: 10em;
+        height: 20em;
+    }
+
 }
 
 
@@ -180,6 +191,39 @@
     nav #hamburguer {
         display: block;
         padding: 0.5em;
+    }
+
+    #recursos .colecao-cards {
+        max-width: 12em;
+    }
+
+    #recursos .colecao-cards .card {
+        min-width: 8em;
+        min-height: 16em;
+        width: 8em;
+        height: 16em;
+    }
+
+    #recursos .titulo-card {
+        font-size: 1.2em;
+    }
+
+    #recursos .texto-card {
+        font-size: 0.75em;
+    }
+
+    #recursos .botao-saibamais {
+        font-size: 0.65em;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    #recursos .flechas-recursos {
+        display: none;
+    }
+
+    #recursos .botoes-extra {
+        display: flex;
     }
 }
 
@@ -217,5 +261,15 @@
 
     #aspectos section .conceito .conteudo button {
         font-size: 0.3em;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #recursos .colecao-cards {
+        max-width: 10em;
+    }
+
+    #recursos .colecao-cards .card {
+        padding-inline: 1em;
     }
 }
