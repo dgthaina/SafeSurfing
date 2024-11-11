@@ -18,6 +18,7 @@ footer .esquerda {
 footer .direita div {
     flex-direction: row;
     display: flex;
+    gap: 1em;
 } 
 
 footer .direita {

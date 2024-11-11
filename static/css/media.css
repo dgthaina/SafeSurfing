@@ -262,7 +262,30 @@
     #aspectos section .conceito .conteudo button {
         font-size: 0.3em;
     }
+
+    #modal {
+        padding-inline: 1em;
+    }
 }
+
+@media screen and (max-width: 300px) {
+    footer .direita div {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    footer .direita img {
+        height: 10em;
+    }
+
+    footer .esquerda input {
+        width: 15em;
+    }
+
+    footer .esquerda h1 {
+        font-size: 1.75em;
+    }
+} 
 
 @media screen and (max-width: 280px) {
     #recursos .colecao-cards {
