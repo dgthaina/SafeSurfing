@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="static\css\riscos.css">
     <link rel="stylesheet" href="static\css\footer.css">
     <link rel="stylesheet" href="static\css\modal.css">
+    <link rel="stylesheet" href="static\css\chat.css">
     <link rel="stylesheet" href="static\css\media.css">
 </head>
 <body>
@@ -28,7 +29,7 @@
                 <li><a href="#riscos">Riscos</a></li>
                 <img src="static/img/logo.png" alt="Logo principal do site" id="logo-nav">
                 <li><a href="#recursos">Recursos</a></li>
-                <li id="li-chat"><span class="material-symbols-outlined">chat</span><a href="">Chat</a></li>
+                <li id="li-chat"><span class="material-symbols-outlined">chat</span>Chat</li>
             </ul>
         </div>
     </nav>
@@ -384,10 +385,36 @@
         </div>
     </div>
 
+    <div id="chat">
+        <div class="container">
+            <div class="titulo-container">
+                <h2><span class="material-symbols-outlined">chat</span>Chat</h2>
+                <span class="material-symbols-outlined fechar">close</span>
+            </div>
+            <div class="mensagens">
+                <div class="vazio">
+                    <span class="material-symbols-outlined">empty_dashboard</span>
+                    <span>Faça uma pergunta</span>
+                </div>
+                <!-- <div class="mensagem pergunta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae doloribus obcaecati atque impedit at repellendus in ratione officia, illum eligendi aperiam, blanditiis architecto aliquam ab, nihil magnam consequatur ipsa placeat?</div>
+                <div class="mensagem resposta">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus voluptate tempore, excepturi ex possimus at numquam, facere in dolorem dolore velit minus. Enim quidem debitis ex recusandae. Suscipit, consequuntur inventore.</div>
+                <div class="mensagem pergunta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae doloribus obcaecati atque impedit at repellendus in ratione officia, illum eligendi aperiam, blanditiis architecto aliquam ab, nihil magnam consequatur ipsa placeat?</div>
+                <div class="mensagem resposta">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus voluptate tempore, excepturi ex possimus at numquam, facere in dolorem dolore velit minus. Enim quidem debitis ex recusandae. Suscipit, consequuntur inventore.</div>
+                <div class="mensagem pergunta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae doloribus obcaecati atque impedit at repellendus in ratione officia, illum eligendi aperiam, blanditiis architecto aliquam ab, nihil magnam consequatur ipsa placeat?</div>
+                <div class="mensagem resposta">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus voluptate tempore, excepturi ex possimus at numquam, facere in dolorem dolore velit minus. Enim quidem debitis ex recusandae. Suscipit, consequuntur inventore.</div> -->
+            </div>
+            <div class="acoes">
+                <textarea placeholder="Mensagem"></textarea>
+                <button><span class="material-symbols-outlined">send</span></button>
+            </div>
+        </div>
+    </div>
+
     <script src="static/js/navbar.js"></script>
     <script src="static/js/revelacao.js"></script>
     <script src="static/js/recursos.js"></script>
     <script src="static/js/modal.js"></script>
+    <script src="static/js/chat.js"></script>
     <script src="static/js/estatuto.js"></script>
 </body>
 </html>

@@ -22,6 +22,10 @@
     #modal {
         padding-inline: 10em;
     }
+
+    #chat {
+        padding-inline: 10em;
+    }
 }
 
 @media screen and (max-width: 1020px) { 
@@ -66,6 +70,12 @@
 
     h1 {
         text-align: center;
+    }
+
+    
+    #chat .container .mensagens .mensagem {
+        max-width: 55%;
+        margin-block: 1em;
     }
 
 }
@@ -113,6 +123,10 @@
     #modal {
         padding-inline: 5em;
     }
+    
+    #chat {
+        padding-inline: 5em;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -145,8 +159,14 @@
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 570px) {
+    #chat .container .mensagens .mensagem {
+        font-size: 0.8em;
+        max-width: 70%;
+    }
+}
 
+@media screen and (max-width: 550px) {
     #imagens-estatuto {
         display: flex;
         align-items: center;
@@ -215,6 +235,10 @@
     #recursos .botao-saibamais {
         font-size: 0.65em;
     }
+
+    #chat .container .mensagens .mensagem {
+        font-size: 0.6em;
+    }
 }
 
 @media screen and (max-width: 470px) {
@@ -264,6 +288,10 @@
     }
 
     #modal {
+        padding-inline: 1em;
+    }
+
+    #chat {
         padding-inline: 1em;
     }
 }
