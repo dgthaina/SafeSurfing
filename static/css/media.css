@@ -68,7 +68,7 @@
         margin-top: 5em;
     }
 
-    h1 {
+    footer .esquerda h4 {
         text-align: center;
     }
 
@@ -294,6 +294,14 @@
     #chat {
         padding-inline: 1em;
     }
+
+    #login .titulo {
+        flex-direction: column;
+    }
+
+    #login .titulo span:first-child {
+        font-size: 1.5em;
+    }
 }
 
 @media screen and (max-width: 300px) {
@@ -310,7 +318,7 @@
         width: 15em;
     }
 
-    footer .esquerda h1 {
+    footer .esquerda h4 {
         font-size: 1.75em;
     }
 } 

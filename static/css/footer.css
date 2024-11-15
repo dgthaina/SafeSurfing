@@ -6,6 +6,7 @@ footer {
 .footerText {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 footer .esquerda {
@@ -13,6 +14,7 @@ footer .esquerda {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100%;
 }
 
 footer .direita div {
@@ -26,17 +28,21 @@ footer .direita {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    flex-direction: column;
 }
 
 footer .direita img {
     height: 6em;
 }
 
-footer .esquerda h1 {
+footer .esquerda h4 {
     font-family: 'Inter', sans-serif;
     color: #402012;
-} 
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: 0.5em;
+}
 
 footer .esquerda input {
     border-radius: 0.5em;
@@ -55,6 +61,16 @@ footer .esquerda button {
     margin-top: 1em;
 } 
 
-footer .direita h3{
+footer .direita h3 {
     line-height: 1em;
+}
+
+footer .direita .restrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+    font-family: 'Poppins', sans-serif;
+    gap: 0.75em;
+    margin-top: 1em ;
 }

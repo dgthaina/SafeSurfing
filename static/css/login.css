@@ -1,0 +1,62 @@
+body {
+    background: linear-gradient(90deg, rgba(219,156,109,1) 0%, rgba(255,224,165,1) 50%, rgba(219,156,109,1) 100%);
+    width: 100vw;
+    height: 100vh;
+}
+
+#login {
+    position: absolute;
+    inset: 0;
+    padding: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#login img {
+    margin-bottom: 1em;
+}
+
+#login .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#login .campos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    padding-block: 1em;
+}
+
+#login .campos label {
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: #402012;
+}
+
+#login .campos input {
+    padding: 0.5em;
+    border: 0;
+    border-radius: 1em;
+}
+
+#login .campos button {
+    margin-top: 1em;
+    background-color: #b3a972;
+    color: white;
+    align-self: center;
+    border: none;
+    padding: 0.5em;
+    border-radius: 1em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+    cursor: pointer;
+}
