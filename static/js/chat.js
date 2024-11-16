@@ -35,7 +35,7 @@ function adicionarResposta(texto) {
 async function enviarPergunta(pergunta) {
     return new Promise((resolve) => {
         setTimeout(() => {
-          resolve('Resposta');
+          resolve({ok: true, mensagem: 'Resposta'});
         }, 5000);
     });
 }
@@ -67,7 +67,8 @@ chat.querySelector('.acoes button').addEventListener('click', async () => {
 
     let resposta = await enviarPergunta();
 
-    chat.querySelector('.mensagens .resposta:last-child').textContent = resposta;
+    chat.querySelector('.mensagens .resposta:last-child').textContent = resposta.mensagem;
+    chat.querySelector('.mensagens .resposta:last-child').style.backgroundColor = resposta.ok ? '#80472d' : 'brown';
 
     aguardandoResposta = false;
 });
