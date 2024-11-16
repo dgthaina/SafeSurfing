@@ -95,6 +95,10 @@
     #riscos .riscos {
         margin-inline: 3em;
     }
+
+    #login-modal .container {
+        margin-inline: 20%;
+    }
 }
 
 @media screen and (max-width: 800px) { 
@@ -163,6 +167,10 @@
     #chat .container .mensagens .mensagem {
         font-size: 0.8em;
         max-width: 70%;
+    }
+
+    #login-modal .container {
+        margin-inline: 10%;
     }
 }
 
@@ -301,6 +309,18 @@
 
     #login .titulo span:first-child {
         font-size: 1.5em;
+    }
+
+    #login-modal .container {
+        margin-inline: 0;
+    }
+
+    #login-modal .container span:first-child {
+        font-size: 3em;
+    }
+
+    #login-modal .container .texto-modal p {
+        font-size: 0.8em;
     }
 }
 
