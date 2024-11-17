@@ -59,6 +59,8 @@ footer .esquerda button {
     font-family: 'Inter', sans-serif;
     width: 8em;
     margin-top: 1em;
+    user-select: none;
+    cursor: pointer;
 } 
 
 footer .direita h3 {

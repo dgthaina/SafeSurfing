@@ -96,7 +96,7 @@
         margin-inline: 3em;
     }
 
-    #login-modal .container {
+    #status-modal .container {
         margin-inline: 20%;
     }
 }
@@ -169,7 +169,7 @@
         max-width: 70%;
     }
 
-    #login-modal .container {
+    #status-modal .container {
         margin-inline: 10%;
     }
 }
@@ -311,15 +311,15 @@
         font-size: 1.5em;
     }
 
-    #login-modal .container {
+    #status-modal .container {
         margin-inline: 0;
     }
 
-    #login-modal .container span:first-child {
+    #status-modal .container span:first-child {
         font-size: 3em;
     }
 
-    #login-modal .container .texto-modal p {
+    #status-modal .container .texto-modal p {
         font-size: 0.8em;
     }
 }
