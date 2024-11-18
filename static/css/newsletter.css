@@ -1,0 +1,47 @@
+#nav-newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    font-family: 'Inter', sans-serif;
+    color: #402012;
+    background: linear-gradient(to right, #a86449, #e6b677 , #a86449);
+}
+
+#nav-newsletter .logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#nav-newsletter .logo h1 {
+    margin: 0;
+}
+
+#nav-newsletter .logo img {
+    width: 4em;
+}
+
+#nav-newsletter .voltar {
+    justify-self: baseline;
+}
+
+#nav-newsletter button {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: #402012;
+    user-select: none;
+    cursor: pointer;
+}
+
+#nav-newsletter button span {
+    font-size: 1.5em;
+}
+
+#nav-newsletter button .icone-botao {
+    font-weight: bold;
+    font-size: 2em;
+}

@@ -257,6 +257,10 @@
     #recursos .botoes-extra {
         display: flex;
     }
+
+    #nav-newsletter .novo-email span:first-child {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -321,6 +325,10 @@
 
     #status-modal .container .texto-modal p {
         font-size: 0.8em;
+    }
+
+    #nav-newsletter .logo h1 {
+        display: none;
     }
 }
 
