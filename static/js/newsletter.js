@@ -6,6 +6,8 @@ let contadorParagrafos = 1;
 let contadorImagens = 1;
 
 document.querySelector('#e-mail .itens .botoes .adicionar-paragrafo').addEventListener('click', () => {
+    let paragrafoPreview = document.createElement('p');
+
     let paragrafo = document.createElement('div');
     paragrafo.classList.add('item', 'paragrafo', `p${contadorParagrafos}`);
 
@@ -18,6 +20,12 @@ document.querySelector('#e-mail .itens .botoes .adicionar-paragrafo').addEventLi
 
     let textarea = document.createElement('textarea');
     textarea.setAttribute('name', `p${contadorParagrafos}`);
+    textarea.addEventListener('keydown', () => {
+        paragrafoPreview.textContent = textarea.value;
+    });
+    textarea.addEventListener('keyup', () => {
+        paragrafoPreview.textContent = textarea.value;
+    });
 
     campo.appendChild(label);
     campo.appendChild(textarea);
@@ -26,7 +34,8 @@ document.querySelector('#e-mail .itens .botoes .adicionar-paragrafo').addEventLi
     icon.classList.add('material-symbols-outlined', 'deletar');
     icon.textContent = 'delete';
     icon.addEventListener('click', () => {
-       paragrafo.remove(); 
+       paragrafo.remove();
+       paragrafoPreview.remove();
     });
 
     paragrafo.appendChild(campo);
@@ -34,10 +43,18 @@ document.querySelector('#e-mail .itens .botoes .adicionar-paragrafo').addEventLi
 
     document.querySelector('#e-mail .itens').insertBefore(paragrafo, document.querySelector('#e-mail .itens .botoes'));
 
+    document.querySelector('#e-mail .preview .conteudo').appendChild(paragrafoPreview);
+
     contadorParagrafos++;
 });
 
 document.querySelector('#e-mail .itens .botoes .adicionar-imagem').addEventListener('click', () => {
+    let figura = document.createElement('figure');
+
+    let imagemPreview = document.createElement('img');
+
+    figura.appendChild(imagemPreview);
+    
     let imagem = document.createElement('div');
     imagem.classList.add('item', 'imagem', `img${contadorImagens}`);
 
@@ -56,6 +73,7 @@ document.querySelector('#e-mail .itens .botoes .adicionar-imagem').addEventListe
 
     input.addEventListener('change', () => {
        img.src = window.URL.createObjectURL(input.files[0]);
+       imagemPreview.src = window.URL.createObjectURL(input.files[0]);
     });
 
     let button = document.createElement('button');
@@ -73,7 +91,8 @@ document.querySelector('#e-mail .itens .botoes .adicionar-imagem').addEventListe
     icon.classList.add('material-symbols-outlined', 'deletar');
     icon.textContent = 'delete';
     icon.addEventListener('click', () => {
-       imagem.remove(); 
+       imagem.remove();
+       figura.remove();
     });
 
     imagem.appendChild(campo);
@@ -81,5 +100,15 @@ document.querySelector('#e-mail .itens .botoes .adicionar-imagem').addEventListe
 
     document.querySelector('#e-mail .itens').insertBefore(imagem, document.querySelector('#e-mail .itens .botoes'));
 
+    document.querySelector('#e-mail .preview .conteudo').appendChild(figura);
+
     contadorImagens++;
+});
+
+document.querySelector('#e-mail .itens .titulo-email .campo textarea').addEventListener('keydown', () => {
+    document.querySelector('#e-mail .preview .conteudo h2').textContent = document.querySelector('#e-mail .itens .titulo-email .campo textarea').value;
+});
+
+document.querySelector('#e-mail .itens .titulo-email .campo textarea').addEventListener('keyup', () => {
+    document.querySelector('#e-mail .preview .conteudo h2').textContent = document.querySelector('#e-mail .itens .titulo-email .campo textarea').value;
 });

@@ -256,3 +256,81 @@
     user-select: none;
     cursor: pointer;
 }
+
+#e-mail .preview {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    border: 0.05em black solid;
+}
+
+#e-mail .preview .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #a86449, #e6b677 , #a86449);
+    width: 100%;
+    text-align: center;
+}
+
+#e-mail .preview .titulo h1 {
+    margin-block: 0.25em;
+    font-family: 'Poppins', sans-serif;
+    color: #402012;
+}
+
+#e-mail .preview .titulo img {
+    width: 5em;
+    height: auto;
+}
+
+#e-mail .preview .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 2em;
+}
+
+#e-mail .preview .conteudo h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.75em;
+}
+
+#e-mail .preview .conteudo p {
+    align-self: baseline;
+    font-family: 'Inter', sans-serif;
+    text-align: justify;
+    text-indent: 1.25em;
+    font-size: 1.25em;
+}
+
+#e-mail .preview .conteudo figure img {
+    width: 90%;
+}
+
+#e-mail .preview .conteudo figure figcaption {
+    font-family: 'Inter', sans-serif;
+}
+
+#e-mail .preview .rodape {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #a86449, #e6b677 , #a86449);
+    color: #402012;
+    padding-block: 1em;
+}
+
+#e-mail .preview .rodape p {
+    font-family: 'Inter', sans-serif;
+}
+
+#e-mail .preview .rodape a {
+    font-family: 'Poppins', sans-serif;
+    color: #402012;
+    font-weight: bold;
+    text-decoration: none;
+}

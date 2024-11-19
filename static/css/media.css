@@ -54,7 +54,15 @@
     #imagens-estatuto {
         width: 75% !important;
     }
-    
+
+    #e-mail {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #e-mail > * {
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 870px) {
@@ -179,14 +187,6 @@
 
     #status-modal .container {
         margin-inline: 10%;
-    }
-
-    #e-mail {
-        flex-direction: column;
-    }
-
-    #e-mail > * {
-        max-width: 100%;
     }
 }
 
@@ -392,5 +392,9 @@
 
     #recursos .colecao-cards .card {
         padding-inline: 1em;
+    }
+
+    #e-mail .itens .botoes {
+        flex-direction: column;
     }
 }
