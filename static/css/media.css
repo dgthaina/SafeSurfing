@@ -26,6 +26,10 @@
     #chat {
         padding-inline: 10em;
     }
+
+    #menu-newsletter .emails {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 1020px) { 
@@ -130,6 +134,10 @@
     
     #chat {
         padding-inline: 5em;
+    }
+
+    #menu-newsletter .emails {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

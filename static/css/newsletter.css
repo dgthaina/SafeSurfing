@@ -59,9 +59,9 @@
 }
 
 #menu-newsletter .emails {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
 }
 
 #menu-newsletter .emails .email {
@@ -73,6 +73,7 @@
     min-width: 20em;
     max-width: 20em;
     cursor: pointer;
+    gap: 0.5em;
 }
 
 #menu-newsletter .emails .email h3 {
