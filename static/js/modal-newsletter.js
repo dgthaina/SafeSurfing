@@ -12,6 +12,20 @@ function abrirModalNewsletter() {
 function fecharModalNewsletter() {
     modalNewsletter.style.opacity = '0';
     setTimeout(() => {
-        modal.style.visibility = 'hidden';
+        modalNewsletter.style.visibility = 'hidden';
     }, 500);
 }
+
+document.querySelectorAll('.novo-email').forEach((e) => {
+    e.addEventListener('click', () => {
+        abrirModalNewsletter();
+    });
+});
+
+modalNewsletter.querySelector('button').addEventListener('click', () => {
+    let titulo = document.getElementsByName('titulo')[0].value;
+
+    if (titulo == '') {
+        abrirStatusModal(false, 'Digite um título para o e-mail.')
+    }
+});
