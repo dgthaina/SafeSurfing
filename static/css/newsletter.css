@@ -163,5 +163,74 @@
 }
 
 #e-mail {
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    padding: 1em;
+}
 
+#e-mail > * {
+    max-width: 50%;
+}
+
+#e-mail .itens {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
+#e-mail .itens .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: #402012 0.1em solid;
+    padding: 0.5em;
+}
+
+#e-mail .itens .item .campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    width: 90%;
+}
+
+#e-mail .itens .item .campo label {
+    color: #402012;
+    font-weight: bold;
+}
+
+#e-mail .itens .item .campo textarea {
+    resize: none;
+    field-sizing: content;
+    border-radius: 0.8em;
+    height: auto;
+    padding: 1em;
+    font-family: 'Inter', sans-serif;
+}
+
+#e-mail .itens .item .deletar {
+    user-select: none;
+    cursor: pointer;
+    color: #402012;
+}
+
+#e-mail .itens .imagem input {
+    display: none;
+}
+
+#e-mail .itens .imagem img {
+    width: 75%;
+    padding: 1em;
+}
+
+#e-mail .itens .imagem button {
+    width: 10em;
+    border: none;
+    border-radius: 1em;
+    padding-block: 1em;
+    background-color: #b3a972;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }

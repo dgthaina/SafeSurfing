@@ -180,6 +180,14 @@
     #status-modal .container {
         margin-inline: 10%;
     }
+
+    #e-mail {
+        flex-direction: column;
+    }
+
+    #e-mail > * {
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 550px) {
