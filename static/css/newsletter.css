@@ -220,7 +220,6 @@
 
 #e-mail .itens .imagem img {
     width: 75%;
-    padding: 1em;
 }
 
 #e-mail .itens .imagem button {
@@ -228,9 +227,32 @@
     border: none;
     border-radius: 1em;
     padding-block: 1em;
-    background-color: #b3a972;
+    background-color: #a86449;
     font-family: 'Inter', sans-serif;
     color: white;
     font-weight: bold;
+    cursor: pointer;
+}
+
+#e-mail .itens .botoes {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: nowrap;
+}
+
+#e-mail .itens .botoes .botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+    font-family: 'Inter', sans-serif;
+    border-radius: 1em;
+    border: none;
+    background-color: #b3a972;
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+    user-select: none;
     cursor: pointer;
 }
