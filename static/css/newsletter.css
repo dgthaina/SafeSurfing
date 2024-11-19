@@ -65,16 +65,20 @@
 }
 
 #menu-newsletter .emails .email {
+    display: flex;
+    align-items: center;
     border: 0.1em #402012 solid;
     border-radius: 1.25em;
     padding: 0.5em;
-    min-width: 15em;
+    min-width: 20em;
+    max-width: 20em;
     cursor: pointer;
 }
 
-#menu-newsletter .emails .email > * {
-    display: inline;
-    vertical-align: middle;
+#menu-newsletter .emails .email h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
 }
 
 #menu-newsletter .emails .email .icone,  #menu-newsletter .emails .email .status {
@@ -83,9 +87,76 @@
 }
 
 #menu-newsletter .emails .email .status {
-    float: right;
+    margin-left: auto;
 }
 
 #menu-newsletter .emails .novo-email {
     border-style: dashed;
+}
+
+#newsletter-modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+
+#newsletter-modal .container {
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #402012;
+    font-family: 'Inter', sans-serif;
+    border-radius: 1em;
+}
+
+#newsletter-modal .container .fechar {
+    align-self: flex-end;
+    user-select: none;
+    cursor: pointer;
+    color: black;
+}
+
+#newsletter-modal h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    margin-block: 1em;
+    text-align: center;
+}
+
+#newsletter-modal .campo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#newsletter-modal .campo label {
+    font-weight: bold;
+}
+
+#newsletter-modal .campo input {
+    padding: 1em;
+    border-radius: 1em;
+    border: 0.1em black solid;
+    margin-bottom: 2em;
+}
+
+#newsletter-modal button {
+    background-color: #b3a972;
+    color: white;
+    padding: 0.5em;
+    padding-inline: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 2em;
+    font-size: 1em;
 }

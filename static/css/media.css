@@ -328,7 +328,12 @@
     }
 
     #nav-newsletter .logo h1 {
-        display: none;
+        display: none ;
+    }
+
+    #menu-newsletter .emails .email {
+        min-width: 15em;
+        max-width: 15em;
     }
 }
 
@@ -348,6 +353,19 @@
 
     footer .esquerda h4 {
         font-size: 1.75em;
+    }
+
+    #menu-newsletter .emails .email {
+        min-width: 10em;
+        max-width: 10em;
+    }
+
+    #newsletter-modal .container {
+        padding: 1em;
+    }
+
+    #newsletter-modal h4 {
+        font-size: 1.5em;
     }
 } 
 

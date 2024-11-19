@@ -12,5 +12,5 @@ document.querySelector('#login .campos button').addEventListener('click', () => 
         return;
     }
 
-    window.location.href = 'newsletter.html';
+    window.location.href = 'newsletter-menu.html';
 });
