@@ -16,7 +16,7 @@ function fecharModalNewsletter() {
     }, 500);
 }
 
-document.querySelectorAll('.novo-email').forEach((e) => {
+document.querySelectorAll('.novo-e-mail').forEach((e) => {
     e.addEventListener('click', () => {
         abrirModalNewsletter();
     });
@@ -26,6 +26,9 @@ modalNewsletter.querySelector('button').addEventListener('click', () => {
     let titulo = document.getElementsByName('titulo')[0].value;
 
     if (titulo == '') {
-        abrirStatusModal(false, 'Digite um título para o e-mail.')
+        abrirStatusModal(false, 'Digite um título para o e-mail.');
+        return;
     }
+
+    window.location.href = 'e-mail.html';
 });

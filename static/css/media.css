@@ -27,7 +27,7 @@
         padding-inline: 10em;
     }
 
-    #menu-newsletter .emails {
+    #menu-newsletter .e-mails {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -136,7 +136,7 @@
         padding-inline: 5em;
     }
 
-    #menu-newsletter .emails {
+    #menu-newsletter .e-mails {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -266,7 +266,7 @@
         display: flex;
     }
 
-    #nav-newsletter .novo-email span:first-child {
+    #nav-newsletter .novo-e-mail span:first-child {
         display: none;
     }
 }
@@ -339,7 +339,7 @@
         display: none ;
     }
 
-    #menu-newsletter .emails .email {
+    #menu-newsletter .e-mails .e-mail {
         min-width: 15em;
         max-width: 15em;
     }
@@ -363,7 +363,7 @@
         font-size: 1.75em;
     }
 
-    #menu-newsletter .emails .email {
+    #menu-newsletter .e-mails .e-mail {
         min-width: 10em;
         max-width: 10em;
     }

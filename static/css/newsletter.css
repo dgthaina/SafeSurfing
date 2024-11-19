@@ -58,13 +58,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-#menu-newsletter .emails {
+#menu-newsletter .e-mails {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
 }
 
-#menu-newsletter .emails .email {
+#menu-newsletter .e-mails .e-mail {
     display: flex;
     align-items: center;
     border: 0.1em #402012 solid;
@@ -76,22 +76,22 @@
     gap: 0.5em;
 }
 
-#menu-newsletter .emails .email h3 {
+#menu-newsletter .e-mails .e-mail h3 {
     overflow: hidden;
     text-overflow: ellipsis;
     text-wrap: nowrap;
 }
 
-#menu-newsletter .emails .email .icone,  #menu-newsletter .emails .email .status {
+#menu-newsletter .e-mails .e-mail .icone,  #menu-newsletter .e-mails .e-mail .status {
     font-size: 2em;
     user-select: none;
 }
 
-#menu-newsletter .emails .email .status {
+#menu-newsletter .e-mails .e-mail .status {
     margin-left: auto;
 }
 
-#menu-newsletter .emails .novo-email {
+#menu-newsletter .e-mails .novo-e-mail {
     border-style: dashed;
 }
 
@@ -160,4 +160,8 @@
     border: none;
     border-radius: 2em;
     font-size: 1em;
+}
+
+#e-mail {
+
 }
