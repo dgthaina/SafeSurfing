@@ -30,5 +30,5 @@ modalNewsletter.querySelector('button').addEventListener('click', () => {
         return;
     }
 
-    window.location.href = 'e-mail.html';
+    window.location.href = '/admin/newsletter/e-mail';
 });

@@ -1,0 +1,2 @@
+FLASK_APP=seguranca_jovens.py
+FLASK_ENV=development

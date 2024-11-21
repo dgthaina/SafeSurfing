@@ -33,11 +33,20 @@ function adicionarResposta(texto) {
 }
 
 async function enviarPergunta(pergunta) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-          resolve({ok: true, mensagem: 'Resposta'});
-        }, 5000);
+    let resposta = await fetch('/api/chat/perguntar', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            'pergunta': pergunta
+        })
     });
+
+    let respostaJSON = await resposta.json();
+
+    return respostaJSON
 }
 
 const textarea = chat.querySelector('textarea');
@@ -60,14 +69,16 @@ chat.querySelector('.acoes button').addEventListener('click', async () => {
     aguardandoResposta = true;
 
     adicionarPergunta(chat.querySelector('.acoes textarea').value);
+
+    let pergunta = chat.querySelector('.acoes textarea').value;
     
     chat.querySelector('.acoes textarea').value = '';
 
     adicionarResposta('...');
 
-    let resposta = await enviarPergunta();
+    let resposta = await enviarPergunta(pergunta);
 
-    chat.querySelector('.mensagens .resposta:last-child').textContent = resposta.mensagem;
+    chat.querySelector('.mensagens .resposta:last-child').textContent = resposta.ok ? resposta.resposta : resposta.mensagem;
     chat.querySelector('.mensagens .resposta:last-child').style.backgroundColor = resposta.ok ? '#80472d' : 'brown';
 
     aguardandoResposta = false;
