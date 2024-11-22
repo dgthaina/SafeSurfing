@@ -71,9 +71,14 @@ document.querySelector('#e-mail .itens .botoes .adicionar-imagem').addEventListe
 
     let img = document.createElement('img');
 
-    input.addEventListener('change', () => {
-       img.src = window.URL.createObjectURL(input.files[0]);
-       imagemPreview.src = window.URL.createObjectURL(input.files[0]);
+    input.addEventListener('change', async () => {
+        let reader = new FileReader();
+        reader.readAsDataURL(input.files[0]);
+
+        reader.addEventListener('load', () => {
+            img.src = reader.result;
+            imagemPreview.src = reader.result;
+        });
     });
 
     let button = document.createElement('button');
@@ -111,4 +116,54 @@ document.querySelector('#e-mail .itens .titulo-email .campo textarea').addEventL
 
 document.querySelector('#e-mail .itens .titulo-email .campo textarea').addEventListener('keyup', () => {
     document.querySelector('#e-mail .preview .conteudo h2').textContent = document.querySelector('#e-mail .itens .titulo-email .campo textarea').value;
+});
+
+document.querySelector('#e-mail-botoes .salvar').addEventListener('click', () => {
+    let lista = [];
+
+    let elementos = document.querySelectorAll('#e-mail .itens .item');
+
+    for (let e of elementos) {
+        if (e.classList.contains('titulo-email')) {
+            if (e.querySelector('textarea').value == '') {
+                abrirStatusModal(false, 'O título do e-mail não pode estar vazio.');
+
+                return;
+            }
+
+            continue;
+        }
+
+        if (e.classList.contains('paragrafo')) {
+            if (e.querySelector('textarea').value == '') {
+                abrirStatusModal(false, 'Nenhum parágrafo pode estar vazio.');
+
+                return;
+            }
+
+            lista.push({
+                tipo: 'paragrafo',
+                conteudo: e.querySelector('textarea').value
+            });
+        }
+
+        if (e.classList.contains('imagem')) {
+            if (e.querySelector('img').src == '') {
+                abrirStatusModal(false, 'Há imagens para selecionar.');
+
+                return;
+            }
+
+            lista.push({
+                tipo: 'imagem',
+                conteudo: e.querySelector('img').src
+            });
+        }
+    }
+    
+    console.log({
+        id: 1,
+        titulo: document.querySelector('#e-mail .itens .titulo-email .campo textarea').value,
+        conteudo: lista
+    });
 });

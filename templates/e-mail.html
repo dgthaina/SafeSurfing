@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-mail</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
-    <link rel="icon" href="static/img/logo.png" type="image/x-icon">
+    <link rel="icon" href="/static/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/geral.css">
     <link rel="stylesheet" href="/static/css/newsletter.css">
     <link rel="stylesheet" href="/static/css/status-modal.css">
@@ -48,6 +48,25 @@
             </div>
         </div>
     </main>
+    <div id="e-mail-botoes">
+        <button class="botao salvar">
+            <span class="material-symbols-outlined">save</span>
+        </button>
+        <button class="botao enviar">
+            <span class="material-symbols-outlined">send</span>
+        </button>
+    </div>
+    <div id="status-modal">
+        <div class="container">
+            <span class="material-symbols-outlined">error</span>
+            <div class="texto-modal">
+                <h5>Erro</h5>
+                <p>Não autorizado. Confira suas credenciais.</p>
+            </div>
+            <span class="material-symbols-outlined fechar">close</span>
+        </div>
+    </div>
+    <script src="/static/js/status-modal.js"></script>
     <script src="/static/js/newsletter.js"></script>
 </body>
 </html>
