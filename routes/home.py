@@ -20,6 +20,11 @@ def cadastrar_email():
 
     if not re.match(padrao_email, dados['e-mail']):
         return jsonify({'ok': False, 'mensagem': 'E-mail inválido.'}), 400
+    
+    inscritos = db.query('SELECT * FROM inscritos WHERE email = %s;', dados['e-mail'])
+
+    if inscritos:
+        return jsonify({'ok': False, 'mensagem': 'E-mail já inscrito.'}), 400
 
     try:
         db.query('INSERT INTO inscritos VALUES (%s, %s);', dados['e-mail'], uuid.uuid4())
