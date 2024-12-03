@@ -22,7 +22,7 @@ document.querySelectorAll('.novo-e-mail').forEach((e) => {
     });
 });
 
-modalNewsletter.querySelector('button').addEventListener('click', () => {
+modalNewsletter.querySelector('button').addEventListener('click', async () => {
     let titulo = document.getElementsByName('titulo')[0].value;
 
     if (titulo == '') {
@@ -30,5 +30,25 @@ modalNewsletter.querySelector('button').addEventListener('click', () => {
         return;
     }
 
-    window.location.href = '/admin/newsletter/e-mail';
+    let resposta = await fetch('/api/e-mail', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            'titulo': titulo
+        })
+    });
+    
+    let respostaJSON = await resposta.json();
+
+    if (!respostaJSON.ok) {
+        abrirStatusModal(false, respostaJSON.mensagem);
+        return;
+    }
+
+    let id = respostaJSON.id;
+
+    window.location.href = '/admin/newsletter/e-mail/' + id;
 });

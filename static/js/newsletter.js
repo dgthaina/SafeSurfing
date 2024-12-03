@@ -1,3 +1,25 @@
+let id = parseInt(window.location.href.split('/').pop());
+
+document.addEventListener('DOMContentLoaded', async () => {
+    let resposta = await fetch('/api/e-mail/' + id);
+
+    let respostaJSON = await resposta.json();
+
+    if (!respostaJSON.ok) {
+        abrirStatusModal(false, respostaJSON.mensagem);
+        return;
+    }
+
+    let email = respostaJSON.resultado;
+
+    if (!email.enviado) {
+        document.querySelector('#e-mail-botoes').style.display = 'none';
+        document.querySelector('#e-mail .itens').style.display = 'none';
+        document.querySelector('#e-mail .preview').style.maxWidth = '100%';
+        
+    }
+});
+
 document.querySelector('#nav-newsletter .logo').addEventListener('click', () => {
     window.location.href = '/';
 });
@@ -166,7 +188,7 @@ document.querySelector('#e-mail-botoes .salvar').addEventListener('click', () =>
     }
     
     console.log({
-        id: window.location.href.split('/').pop(),
+        id: id,
         titulo: document.querySelector('#e-mail .itens .titulo-email .campo textarea').value,
         conteudo: lista
     });
