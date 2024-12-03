@@ -1,4 +1,4 @@
-document.querySelector('#login .campos button').addEventListener('click', async () => {
+async function login() {
     let usuario = document.getElementsByName('usuario')[0].value;
     let senha = document.getElementsByName('senha')[0].value;
 
@@ -27,4 +27,11 @@ document.querySelector('#login .campos button').addEventListener('click', async 
     }
 
     window.location.href = '/admin/newsletter';
+}
+
+document.querySelector('#login .campos button').addEventListener('click', login);
+document.addEventListener('keyup', ({key}) => {
+    if (key == 'Enter') {
+        login();
+    }
 });

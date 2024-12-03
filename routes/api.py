@@ -1,5 +1,6 @@
 from flask import Blueprint
 from .chat import chat
+from .email import email
 
 api = Blueprint('api', __name__)
 

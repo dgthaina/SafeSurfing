@@ -1,5 +1,9 @@
+document.querySelector('#nav-newsletter .logo').addEventListener('click', () => {
+    window.location.href = '/';
+});
+
 document.querySelector('#nav-newsletter .voltar').addEventListener('click', () => {
-    window.location.href = 'newsletter-menu.html';
+    window.location.href = '/admin/newsletter';
 });
 
 let contadorParagrafos = 1;
@@ -162,7 +166,7 @@ document.querySelector('#e-mail-botoes .salvar').addEventListener('click', () =>
     }
     
     console.log({
-        id: 1,
+        id: window.location.href.split('/').pop(),
         titulo: document.querySelector('#e-mail .itens .titulo-email .campo textarea').value,
         conteudo: lista
     });

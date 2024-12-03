@@ -78,6 +78,7 @@
     padding: 0.5em;
     border-radius: 2em;
     border: 0;
+    cursor: pointer;
 }
 
 #aspectos section .conceito:nth-child(odd) .conteudo button {

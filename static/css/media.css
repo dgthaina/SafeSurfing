@@ -177,6 +177,14 @@
     footer .direita {
         width: 100%;
     }
+
+    #container-404 .informacoes {
+        flex-direction: column;
+        padding: 0.5em;
+    }
+    #container-404 .informacoes h1, #container-404 .informacoes h2 {
+        text-align: center;
+    } 
 }
 
 @media screen and (max-width: 570px) {

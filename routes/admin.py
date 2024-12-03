@@ -26,8 +26,11 @@ def login():
 def newsletter():
     if not 'usuario' in session:
         return redirect(url_for('admin.login'))
-    return render_template('newsletter-menu.html')
+    return render_template('newsletter-menu.html', emails=db.query('SELECT * FROM emails;'))
 
 @admin.route('/newsletter/e-mail/<int:id>')
 def email(id):
-    return render_template('e-mail.html')
+    resultado = db.query('SELECT * FROM emails WHERE id = %s;', id)
+    if not resultado:
+        return render_template('404.html'), 404
+    return render_template('e-mail.html', email=db.query('SELECT * FROM emails WHERE id = %s;', id))

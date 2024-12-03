@@ -82,6 +82,7 @@
 }
 
 #riscos .riscos .risco .conteudo button {
+    font-family: 'Inter', sans-serif;
     background-color: #b3a972;
     color: white;
     padding: 0.5em;
