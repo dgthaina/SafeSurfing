@@ -30,13 +30,15 @@
                 <h3>Novo e-mail</h3>
                 <span class="material-symbols-outlined status">add</span>
             </div>
-            {% for email in emails %}
-                <div class="e-mail" onclick="window.location.href='/admin/newsletter/e-mail/{{ email.id }}'">
-                    <span class="material-symbols-outlined icone">mail</span>
-                    <h3>Título</h3>
-                    <span class="material-symbols-outlined status">{{'check' if email.enviado else 'edit'}}</span>
-                </div>
-            {% endfor %}
+            {% if emails %}
+                {% for email in emails %}
+                    <div class="e-mail" onclick="window.location.href='/admin/newsletter/e-mail/{{ email.id }}'">
+                        <span class="material-symbols-outlined icone">mail</span>
+                        <h3>{{ email.titulo }}</h3>
+                        <span class="material-symbols-outlined status">{{'check' if email.enviado else 'edit'}}</span>
+                    </div>
+                {% endfor %}
+            {% endif %}
         </div>
     </main>
     <div id="newsletter-modal">

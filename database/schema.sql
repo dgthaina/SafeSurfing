@@ -14,7 +14,7 @@ CREATE TABLE inscritos (
     codigo CHAR(36) UNIQUE
 );
 
-CREATE TABLE email (
+CREATE TABLE emails (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	titulo VARCHAR(255) NOT NULL,
 	conteudo JSON,

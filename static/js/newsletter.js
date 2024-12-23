@@ -1,37 +1,6 @@
 let id = parseInt(window.location.href.split('/').pop());
 
-document.addEventListener('DOMContentLoaded', async () => {
-    let resposta = await fetch('/api/e-mail/' + id);
-
-    let respostaJSON = await resposta.json();
-
-    if (!respostaJSON.ok) {
-        abrirStatusModal(false, respostaJSON.mensagem);
-        return;
-    }
-
-    let email = respostaJSON.resultado;
-
-    if (!email.enviado) {
-        document.querySelector('#e-mail-botoes').style.display = 'none';
-        document.querySelector('#e-mail .itens').style.display = 'none';
-        document.querySelector('#e-mail .preview').style.maxWidth = '100%';
-        
-    }
-});
-
-document.querySelector('#nav-newsletter .logo').addEventListener('click', () => {
-    window.location.href = '/';
-});
-
-document.querySelector('#nav-newsletter .voltar').addEventListener('click', () => {
-    window.location.href = '/admin/newsletter';
-});
-
-let contadorParagrafos = 1;
-let contadorImagens = 1;
-
-document.querySelector('#e-mail .itens .botoes .adicionar-paragrafo').addEventListener('click', () => {
+function adicionarParagrafo(conteudo) {
     let paragrafoPreview = document.createElement('p');
 
     let paragrafo = document.createElement('div');
@@ -53,6 +22,9 @@ document.querySelector('#e-mail .itens .botoes .adicionar-paragrafo').addEventLi
         paragrafoPreview.textContent = textarea.value;
     });
 
+    textarea.value = conteudo;
+    paragrafoPreview.textContent = conteudo;
+
     campo.appendChild(label);
     campo.appendChild(textarea);
 
@@ -72,9 +44,9 @@ document.querySelector('#e-mail .itens .botoes .adicionar-paragrafo').addEventLi
     document.querySelector('#e-mail .preview .conteudo').appendChild(paragrafoPreview);
 
     contadorParagrafos++;
-});
+}
 
-document.querySelector('#e-mail .itens .botoes .adicionar-imagem').addEventListener('click', () => {
+function adicionarImagem(conteudo) {
     let figura = document.createElement('figure');
 
     let imagemPreview = document.createElement('img');
@@ -107,6 +79,9 @@ document.querySelector('#e-mail .itens .botoes .adicionar-imagem').addEventListe
         });
     });
 
+    img.src = conteudo;
+    imagemPreview.src = conteudo;
+
     let button = document.createElement('button');
     button.textContent = 'Enviar imagem';
     button.addEventListener('click', () => {
@@ -134,6 +109,59 @@ document.querySelector('#e-mail .itens .botoes .adicionar-imagem').addEventListe
     document.querySelector('#e-mail .preview .conteudo').appendChild(figura);
 
     contadorImagens++;
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    let resposta = await fetch('/api/e-mail/' + id);
+
+    let respostaJSON = await resposta.json();
+
+    if (!respostaJSON.ok) {
+        abrirStatusModal(false, respostaJSON.mensagem);
+        return;
+    }
+
+    let email = respostaJSON.resultado;
+
+    if (email.enviado) {
+        document.querySelector('#e-mail-botoes').style.display = 'none';
+        document.querySelector('#e-mail .itens').style.display = 'none';
+        document.querySelector('#e-mail .preview').style.maxWidth = '100%';   
+    }
+
+    document.querySelector('#e-mail .itens .titulo-email .campo textarea').value = email.titulo;
+    document.querySelector('#e-mail .preview .conteudo h2').textContent = email.titulo;
+
+    if (!email.conteudo) {
+        return;
+    }
+
+    for (let item of email.conteudo) {
+        if (item.tipo == 'paragrafo') {
+            adicionarParagrafo(item.conteudo);
+            continue;
+        }
+        adicionarImagem(item.conteudo);
+    };
+});
+
+document.querySelector('#nav-newsletter .logo').addEventListener('click', () => {
+    window.location.href = '/';
+});
+
+document.querySelector('#nav-newsletter .voltar').addEventListener('click', () => {
+    window.location.href = '/admin/newsletter';
+});
+
+let contadorParagrafos = 1;
+let contadorImagens = 1;
+
+document.querySelector('#e-mail .itens .botoes .adicionar-paragrafo').addEventListener('click', () => {
+    adicionarParagrafo('');
+});
+
+document.querySelector('#e-mail .itens .botoes .adicionar-imagem').addEventListener('click', () => {
+    adicionarImagem('');
 });
 
 document.querySelector('#e-mail .itens .titulo-email .campo textarea').addEventListener('keydown', () => {
@@ -144,7 +172,7 @@ document.querySelector('#e-mail .itens .titulo-email .campo textarea').addEventL
     document.querySelector('#e-mail .preview .conteudo h2').textContent = document.querySelector('#e-mail .itens .titulo-email .campo textarea').value;
 });
 
-document.querySelector('#e-mail-botoes .salvar').addEventListener('click', () => {
+document.querySelector('#e-mail-botoes .salvar').addEventListener('click', async () => {
     let lista = [];
 
     let elementos = document.querySelectorAll('#e-mail .itens .item');
@@ -187,9 +215,25 @@ document.querySelector('#e-mail-botoes .salvar').addEventListener('click', () =>
         }
     }
     
-    console.log({
-        id: id,
-        titulo: document.querySelector('#e-mail .itens .titulo-email .campo textarea').value,
-        conteudo: lista
+    let resposta = await fetch('/api/e-mail', {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            id: id,
+            titulo: document.querySelector('#e-mail .itens .titulo-email .campo textarea').value,
+            conteudo: lista
+        })
     });
+
+    let respostaJSON = await resposta.json();
+
+    if (!respostaJSON.ok) {
+        abrirStatusModal(false, respostaJSON.mensagem);
+        return;
+    } 
+
+    abrirStatusModal(true, 'E-mail salvo.')
 });
