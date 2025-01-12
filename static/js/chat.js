@@ -66,6 +66,10 @@ chat.querySelector('.acoes button').addEventListener('click', async () => {
         return;
     }
 
+    if (chat.querySelector('.acoes textarea').value.trim() == '') {
+        return;
+    }
+
     aguardandoResposta = true;
 
     adicionarPergunta(chat.querySelector('.acoes textarea').value);

@@ -237,3 +237,89 @@ document.querySelector('#e-mail-botoes .salvar').addEventListener('click', async
 
     abrirStatusModal(true, 'E-mail salvo.')
 });
+
+document.querySelector('#e-mail-botoes .enviar').addEventListener('click', async () => {
+    abrirModalConfirmar('Aviso', 'O e-mail será salvo e enviado. Deseja enviar o e-mail?', async () => {
+        let lista = [];
+
+        let elementos = document.querySelectorAll('#e-mail .itens .item');
+
+        for (let e of elementos) {
+            if (e.classList.contains('titulo-email')) {
+                if (e.querySelector('textarea').value == '') {
+                    abrirStatusModal(false, 'O título do e-mail não pode estar vazio.');
+
+                    return;
+                }
+
+                continue;
+            }
+
+            if (e.classList.contains('paragrafo')) {
+                if (e.querySelector('textarea').value == '') {
+                    abrirStatusModal(false, 'Nenhum parágrafo pode estar vazio.');
+
+                    return;
+                }
+
+                lista.push({
+                    tipo: 'paragrafo',
+                    conteudo: e.querySelector('textarea').value
+                });
+            }
+
+            if (e.classList.contains('imagem')) {
+                if (e.querySelector('img').src == '') {
+                    abrirStatusModal(false, 'Há imagens para selecionar.');
+
+                    return;
+                }
+
+                lista.push({
+                    tipo: 'imagem',
+                    conteudo: e.querySelector('img').src
+                });
+            }
+        }
+
+        let resposta = await fetch('/api/e-mail', {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                id: id,
+                titulo: document.querySelector('#e-mail .itens .titulo-email .campo textarea').value,
+                conteudo: lista
+            })
+        });
+    
+        let respostaJSON = await resposta.json();
+    
+        if (!respostaJSON.ok) {
+            abrirStatusModal(false, respostaJSON.mensagem);
+            return;
+        } 
+
+        resposta = await fetch('/api/e-mail/enviar', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                id: id
+            })
+        });
+    
+        respostaJSON = await resposta.json();
+    
+        if (!respostaJSON.ok) {
+            abrirStatusModal(false, respostaJSON.mensagem);
+            return;
+        }
+        
+        window.location.reload();
+    });
+});

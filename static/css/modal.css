@@ -18,19 +18,22 @@
     border-radius: 1em;
     display: flex;
     flex-direction: column;
+    max-height: 90%;
+    overflow-y: visible;
 }
 
 #modal .titulo {
     margin: 0;
     max-width: 100%;
+    min-height: fit-content;
     text-overflow: ellipsis;
-    overflow: hidden;
+    overflow-y: visible;
 }
 
 #modal .texto {
     max-width: 100%;
     text-overflow: ellipsis;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #modal button {

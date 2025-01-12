@@ -1,5 +1,7 @@
-from flask import Blueprint, jsonify, request, json
+from flask import Blueprint, jsonify, request, json, render_template
 from ..database.db import db
+from ..services.email_server import smtp_server
+import os
 
 email = Blueprint('e-mail', __name__)
 
@@ -12,7 +14,8 @@ def buscar_email(id):
     
     resultado = resultado[0]
 
-    resultado['conteudo'] = json.loads(resultado['conteudo'])
+    if resultado['conteudo'] is not None:
+        resultado['conteudo'] = json.loads(resultado['conteudo'])
 
     return jsonify({'ok': True, 'resultado': resultado}), 200
 
@@ -42,3 +45,36 @@ def atualizar_email():
     db.query('UPDATE emails SET titulo = %s, conteudo = %s WHERE id = %s;', dados['titulo'], str(json.dumps(dados['conteudo'])), dados['id'])
 
     return jsonify({'ok': True}), 200
+
+@email.route('/enviar', methods=['POST'])
+def enviar():
+    dados = request.json
+
+    if 'id' not in dados:
+        return jsonify({'ok': False, 'mensagem': 'Parâmetro obrigatório não especificado.'}), 400
+    
+    ids = [email['id'] for email in db.query('SELECT id FROM emails;')]
+    
+    if dados['id'] not in ids:
+        return jsonify({'ok': False, 'mensagem': f'Não há e-mails identificados com "{dados['id']}".'}), 400
+    
+    inscritos = db.query('SELECT * FROM inscritos;')
+
+    dados_email = db.query('SELECT * FROM emails WHERE id = %s;', dados['id'])[0]
+
+    dados_email['conteudo'] = json.loads(dados_email['conteudo'])
+
+    prefixo_site = os.environ.get('WEBSITE_PREFIX')
+
+    try:
+        for inscrito in inscritos:
+            codigo_inscrito = inscrito['codigo']
+            smtp_server.send_email(dados_email['titulo'], render_template('e-mail-template.html', dados_email=dados_email, prefixo_site=prefixo_site, codigo_inscrito=codigo_inscrito), inscrito['email'],)
+    except Exception as e:
+        print(e) # lembrar de tirar
+        return jsonify({'ok': False, 'mensagem': 'Não foi possível enviar o e-mail.'}), 400
+
+    # db.query('UPDATE emails SET enviado = true WHERE id = %s;', dados['id']) lembrar de descomentar
+
+    return jsonify({'ok': True}), 200
+    

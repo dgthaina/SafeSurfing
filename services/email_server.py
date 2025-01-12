@@ -21,7 +21,11 @@ class SMTPServer:
         message.attach(MIMEText(content, 'html'))
         message['To'] = email
         
-        self.server.sendmail(message['From'], message['To'], message.as_string())
+        try:
+            self.server.sendmail(message['From'], message['To'], message.as_string())
+        except:
+            self.server.login(self.email, self.password)
+            self.send_email(subject, content, email)
 
 smtp_server = SMTPServer(
     os.environ.get('SMTP_HOST'),

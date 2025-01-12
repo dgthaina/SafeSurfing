@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, render_template
 import google.generativeai as genai
 from .routes.home import home
 from .routes.admin import admin
