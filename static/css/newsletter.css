@@ -278,7 +278,7 @@
 
 #e-mail .preview .titulo h1 {
     margin-block: 0.25em;
-    font-family: 'Poppins', sans-serif;
+    font-family: Tahoma;
     color: #402012;
 }
 
@@ -295,13 +295,13 @@
 }
 
 #e-mail .preview .conteudo h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: Tahoma;
     font-size: 1.75em;
 }
 
 #e-mail .preview .conteudo p {
     align-self: baseline;
-    font-family: 'Inter', sans-serif;
+    font-family: sans-serif;
     text-align: justify;
     text-indent: 1.25em;
     font-size: 1.25em;
@@ -312,7 +312,7 @@
 }
 
 #e-mail .preview .conteudo figure figcaption {
-    font-family: 'Inter', sans-serif;
+    font-family: sans-serif;
 }
 
 #e-mail .preview .rodape {
@@ -326,11 +326,11 @@
 }
 
 #e-mail .preview .rodape p {
-    font-family: 'Inter', sans-serif;
+    font-family: sans-serif;
 }
 
 #e-mail .preview .rodape a {
-    font-family: 'Poppins', sans-serif;
+    font-family: Tahoma;
     color: #402012;
     font-weight: bold;
     text-decoration: none;
