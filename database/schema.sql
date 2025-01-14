@@ -1,8 +1,8 @@
-DROP SCHEMA IF EXISTS seguranca_jovens;
+DROP SCHEMA IF EXISTS safesurfing;
 
-CREATE SCHEMA seguranca_jovens;
+CREATE SCHEMA safesurfing;
 
-USE seguranca_jovens;
+USE safesurfing;
 
 CREATE TABLE administradores (
 	usuario VARCHAR(30) PRIMARY KEY,

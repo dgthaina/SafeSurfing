@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, jsonify
+from flask import Blueprint, render_template, request, jsonify, redirect, url_for
 from ..database.db import db
 import uuid
 import re
@@ -32,3 +32,9 @@ def cadastrar_email():
         return jsonify({'ok': False, 'mensagem': 'Houve um erro ao tentar realizar a inscrição.'}), 500
     
     return jsonify({'ok': True, 'mensagem': 'E-mail inscrito.'}), 201
+
+@home.route('/newsletter/<codigo>', methods=['GET'])
+def cancelar_inscricao_email(codigo):
+    db.query('DELETE FROM inscritos WHERE codigo = %s;', codigo)
+
+    return redirect(url_for('home.home_handler'))

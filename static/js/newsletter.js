@@ -49,6 +49,8 @@ function adicionarParagrafo(conteudo) {
 function adicionarImagem(conteudo) {
     let figura = document.createElement('figure');
 
+    let img = document.createElement('img');
+
     let imagemPreview = document.createElement('img');
 
     figura.appendChild(imagemPreview);
@@ -63,35 +65,24 @@ function adicionarImagem(conteudo) {
     label.setAttribute('for', `img${contadorImagens}`);
     label.textContent = 'Imagem';
 
-    let input = document.createElement('input');
-    input.setAttribute('type', 'file');
-    input.setAttribute('name', `img${contadorImagens}`);
-
-    let img = document.createElement('img');
-
-    input.addEventListener('change', async () => {
-        let reader = new FileReader();
-        reader.readAsDataURL(input.files[0]);
-
-        reader.addEventListener('load', () => {
-            img.src = reader.result;
-            imagemPreview.src = reader.result;
-        });
+    let textarea = document.createElement('textarea');
+    textarea.setAttribute('name', `img${contadorImagens}`);
+    textarea.addEventListener('keydown', () => {
+        img.src = textarea.value;
+        imagemPreview.src = textarea.value;
+    });
+    textarea.addEventListener('keyup', () => {
+        img.src = textarea.value;
+        imagemPreview.src = textarea.value;
     });
 
+    textarea.textContent = conteudo;
     img.src = conteudo;
     imagemPreview.src = conteudo;
 
-    let button = document.createElement('button');
-    button.textContent = 'Enviar imagem';
-    button.addEventListener('click', () => {
-        input.click();
-    });
-
     campo.appendChild(label);
-    campo.appendChild(input);
+    campo.appendChild(textarea);
     campo.appendChild(img);
-    campo.appendChild(button);
 
     let icon = document.createElement('span');
     icon.classList.add('material-symbols-outlined', 'deletar');
